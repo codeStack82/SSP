@@ -83,7 +83,7 @@
                         echo "<p>The original numbers are: </p>"; 
                         echo "<p>$nums[0]</p>";
                         echo "<p>$nums[1]</p>";
-                        echo "<p>$nums[2]</p><br/><hr/><br/>";
+                        echo "<p>$nums[2]</p><br/><hr/r><br/>";
 
                         $nums[0] = round(12.56);
                         $nums[1] = ceil(4550.456);
@@ -92,7 +92,7 @@
                         echo "<p>The new numbers are: </p>"; 
                         echo "<p>$nums[0]</p>";
                         echo "<p>$nums[1]</p>";
-                        echo "<p>$nums[2]</p><br/><hr/><br/>";
+                        echo "<p>$nums[2]</p><br/><hr/r><br/>";
                     ?>
                 </div>
             </div><!--/ Card #1-->

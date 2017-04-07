@@ -1,0 +1,264 @@
+-- phpMyAdmin SQL Dump
+-- version 4.6.5.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Mar 26, 2017 at 09:53 PM
+-- Server version: 5.6.34
+-- PHP Version: 7.1.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `chinese_zodiak`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `random_proverb`
+--
+
+CREATE TABLE `random_proverb` (
+  `proverb_number` int(11) NOT NULL,
+  `proverb` varchar(400) NOT NULL,
+  `display_count` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `random_proverb`
+--
+
+INSERT INTO `random_proverb` (`proverb_number`, `proverb`, `display_count`) VALUES
+(1, 'Everything has beauty, but not everyone sees it.', 0),
+(2, 'Wheresoever you go, go with all your heart.', 0),
+(3, 'Knowing is not as good as loving; loving is not as good as enjoying.', 0),
+(4, 'To learn and practice what is learned from time to time is pleasure, is it not? To have friends from afar is happiness, is it not? To be unperturbed when not appreciated by others is a gentleman, is it not?', 0),
+(5, 'Review the old and deducing the new makes a teacher.', 0),
+(6, 'The gentleman understands righteousness, the petty man understands interest.', 0),
+(7, 'Aspire to the principle, behave with virtue, abide by benevolence, and immerse yourself in the arts.', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zodiak_feedback`
+--
+
+CREATE TABLE `zodiak_feedback` (
+  `message_date` date NOT NULL,
+  `message_time` time NOT NULL,
+  `sender` varchar(40) NOT NULL,
+  `message` varchar(250) NOT NULL,
+  `public_message` enum('Y','N') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zodiak_years`
+--
+
+CREATE TABLE `zodiak_years` (
+  `years` smallint(4) NOT NULL,
+  `signs` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zodiakyears`
+--
+
+INSERT INTO `zodiak_years` (`years`, `signs`) VALUES
+(1900, 'Rat'),
+(1901, 'Ox'),
+(1902, 'Tiger'),
+(1903, 'Rabbit'),
+(1904, 'Dragon'),
+(1905, 'Snake'),
+(1906, 'Horse'),
+(1907, 'Goat'),
+(1908, 'Monkey'),
+(1909, 'Rooster'),
+(1910, 'Dog'),
+(1911, 'Pig'),
+(1912, 'Rat'),
+(1913, 'Ox'),
+(1914, 'Tiger'),
+(1915, 'Rabbit'),
+(1916, 'Dragon'),
+(1917, 'Snake'),
+(1918, 'Horse'),
+(1919, 'Goat'),
+(1920, 'Monkey'),
+(1921, 'Rooster'),
+(1922, 'Dog'),
+(1923, 'Pig'),
+(1924, 'Rat'),
+(1925, 'Ox'),
+(1926, 'Tiger'),
+(1927, 'Rabbit'),
+(1928, 'Dragon'),
+(1929, 'Snake'),
+(1930, 'Horse'),
+(1931, 'Goat'),
+(1932, 'Monkey'),
+(1933, 'Rooster'),
+(1934, 'Dog'),
+(1935, 'Pig'),
+(1936, 'Rat'),
+(1937, 'Ox'),
+(1938, 'Tiger'),
+(1939, 'Rabbit'),
+(1940, 'Dragon'),
+(1941, 'Snake'),
+(1942, 'Horse'),
+(1943, 'Goat'),
+(1944, 'Monkey'),
+(1945, 'Rooster'),
+(1946, 'Dog'),
+(1947, 'Pig'),
+(1948, 'Rat'),
+(1949, 'Ox'),
+(1950, 'Tiger'),
+(1951, 'Rabbit'),
+(1952, 'Dragon'),
+(1953, 'Snake'),
+(1954, 'Horse'),
+(1955, 'Goat'),
+(1956, 'Monkey'),
+(1957, 'Rooster'),
+(1958, 'Dog'),
+(1959, 'Pig'),
+(1960, 'Rat'),
+(1961, 'Ox'),
+(1962, 'Tiger'),
+(1963, 'Rabbit'),
+(1964, 'Dragon'),
+(1965, 'Snake'),
+(1966, 'Horse'),
+(1967, 'Goat'),
+(1968, 'Monkey'),
+(1969, 'Rooster'),
+(1970, 'Dog'),
+(1971, 'Pig'),
+(1972, 'Rat'),
+(1973, 'Ox'),
+(1974, 'Tiger'),
+(1975, 'Rabbit'),
+(1976, 'Dragon'),
+(1977, 'Snake'),
+(1978, 'Horse'),
+(1979, 'Goat'),
+(1980, 'Monkey'),
+(1981, 'Rooster'),
+(1982, 'Dog'),
+(1983, 'Pig'),
+(1984, 'Rat'),
+(1985, 'Ox'),
+(1986, 'Tiger'),
+(1987, 'Rabbit'),
+(1988, 'Dragon'),
+(1989, 'Snake'),
+(1990, 'Horse'),
+(1991, 'Goat'),
+(1992, 'Monkey'),
+(1993, 'Rooster'),
+(1994, 'Dog'),
+(1995, 'Pig'),
+(1996, 'Rat'),
+(1997, 'Ox'),
+(1998, 'Tiger'),
+(1999, 'Rabbit'),
+(2000, 'Dragon'),
+(2001, 'Snake'),
+(2002, 'Horse'),
+(2003, 'Goat'),
+(2004, 'Monkey'),
+(2005, 'Rooster'),
+(2006, 'Dog'),
+(2007, 'Pig'),
+(2008, 'Rat'),
+(2009, 'Ox'),
+(2010, 'Tiger'),
+(2011, 'Rabbit'),
+(2012, 'Dragon'),
+(2013, 'Snake'),
+(2014, 'Horse'),
+(2015, 'Goat'),
+(2016, 'Monkey'),
+(2017, 'Rooster'),
+(2018, 'Dog'),
+(2019, 'Pig'),
+(2020, 'Rat'),
+(2021, 'Ox'),
+(2022, 'Tiger'),
+(2023, 'Rabbit'),
+(2024, 'Dragon'),
+(2025, 'Snake'),
+(2026, 'Horse'),
+(2027, 'Goat'),
+(2028, 'Monkey'),
+(2029, 'Rooster'),
+(2030, 'Dog'),
+(2031, 'Pig');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zodiak_signs`
+--
+
+CREATE TABLE `zodiak_signs` (
+  `Sign` varchar(10) NOT NULL,
+  `President` varchar(75) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zodiak_signs`
+--
+
+INSERT INTO `zodiak_signs` (`Sign`, `President`) VALUES
+('Dog', 'George W. Bush'),
+('Dragon', 'Abraham Lincoln'),
+('Goat', 'James Madison'),
+('Horse', 'Theodore Rosevelt'),
+('Monkey', 'Harry Truman'),
+('OX', 'Barrack Obama'),
+('Pig', 'Ronald Regan'),
+('Rabbit ', 'John Adams'),
+('Rat', 'George Washington'),
+('Rooster', 'Grover Cleveland'),
+('Snake', 'John Kenedy'),
+('Tiger', 'Dwight Eisenhower');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `random_proverb`
+--
+ALTER TABLE `random_proverb`
+  ADD PRIMARY KEY (`proverb_number`);
+
+--
+-- Indexes for table `zodiakyears`
+--
+ALTER TABLE `zodiakyears`
+  ADD PRIMARY KEY (`years`);
+
+--
+-- Indexes for table `zodiak_signs`
+--
+ALTER TABLE `zodiak_signs`
+  ADD PRIMARY KEY (`Sign`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `random_proverb`
+--
+ALTER TABLE `random_proverb`
+  MODIFY `proverb_number` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
